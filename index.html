@@ -49,6 +49,27 @@
       max-width: 60%;
       height: auto;
     }
+
+    .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.credit {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 11px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 2px 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .credit {
+  opacity: 1;
+}
   </style>
 </head>
 
@@ -68,8 +89,14 @@
 </header>
 
 <div class="gallery">
+  <div class="image-container">
   <img src="images/image1.jpg">
+  <span class="credit">© Malo Legrand</span>
+</div>
+   <div class="image-container">
   <img src="images/image25.jpg">
+  <span class="credit">© Aurelien Mole</span>
+</div>
   <img src="images/image21.jpg">
   <img src="images/image8.jpg">
   <img src="images/image3.jpg">
